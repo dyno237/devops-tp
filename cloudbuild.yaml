@@ -1,0 +1,21 @@
+steps:
+  # Étape 1 : Build de l'image Docker
+  # On utilise deux tags : le SHA du commit (pour l'historique) et 'latest'
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Build'
+    args: 
+      - 'build'
+      - '-t'
+      - 'europe-west1-docker.pkg.dev/$PROJECT_ID/helloworld/helloworld:$SHORT_SHA'
+      - '-t'
+      - 'europe-west1-docker.pkg.dev/$PROJECT_ID/helloworld/helloworld:latest'
+      - '.'
+
+  # Étape 2 : Push des images vers Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Push Tagged'
+    args: ['push', 'europe-west1-docker.pkg.dev/$PROJECT_ID/helloworld/helloworld:$SHORT_SHA']
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Push Latest'
+    args: ['push', 'europe-west1-docker.pkg.dev/$PROJECT_ID/helloworld/helloworld:latest']

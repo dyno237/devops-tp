@@ -1,0 +1,32 @@
+# Python 
+__pycache__/ 
+*.pyc 
+*.pyo 
+.env 
+venv/ 
+ 
+# Terraform 
+terraform/.terraform/ 
+terraform/*.tfstate 
+terraform/*.tfstate.backup 
+terraform/.terraform.lock.hcl 
+terraform/terraform.tfvars 
+ 
+# Divers 
+.DS_Store
+ 
+# Divers 
+.DS_Store
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                                                                                                                              
+~                                                                                 
