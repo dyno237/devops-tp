@@ -19,3 +19,5 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: 'Push Latest'
     args: ['push', 'europe-west1-docker.pkg.dev/$PROJECT_ID/helloworld/helloworld:latest']
+options:
+  logging: CLOUD_LOGGING_ONLY
